@@ -1,12 +1,9 @@
-function sumAll(arr) {
-  let bigger=0;
-  let smaller=0;
-  if (arr[0]>arr[1]) {bigger=arr[0], smaller=arr[1]}
-  else bigger=arr[1], smaller=arr[0];
-  let sum=0;
-  for (let i=smaller;i<=bigger;i++){
-    sum=sum+i;
-    
+function sumRanges(arr) {
+  let min = Math.min(...arr);
+  let max = Math.max(...arr);
+  let sum = 0;
+  for (let i = min; i <= max; i++) {
+    sum = sum + i;
   }
   console.log(sum);
   return sum;
